@@ -17,6 +17,7 @@ public class player : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
     private float horizontal;
+    public Animator animator;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -58,7 +59,6 @@ public class player : MonoBehaviour
 
        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
        {
-              Flip();
               StartCoroutine(Dash());
        }
 
@@ -67,8 +67,12 @@ public class player : MonoBehaviour
             Destroy(gameObject);
             print("ded");
         }
-    }
 
+        Flip();
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
+    }
 
     private bool IsGrounded()
     {
@@ -87,10 +91,11 @@ public class player : MonoBehaviour
     {
        if (horizontal > 0 && !isFacingRight || horizontal < 0 && isFacingRight)
         {
+            gameObject.GetComponent<SpriteRenderer>().flipX = !gameObject.GetComponent<SpriteRenderer>().flipX;
             isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
+            /*Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
-            transform.localScale = localScale;
+            transform.localScale = localScale;*/
         }
     }
     private IEnumerator Dash()
