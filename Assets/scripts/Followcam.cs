@@ -12,9 +12,6 @@ public class Followcam : MonoBehaviour
 
     [SerializeField] public Transform target;
 
-    public GameObject leftBoundary;
-    public GameObject rightBoundary;
-
     public float bottomLimit;
 
     // Update is called once per frame

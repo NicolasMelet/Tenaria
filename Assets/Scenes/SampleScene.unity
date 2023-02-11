@@ -527,8 +527,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b154664f6340140b35604cbc97d635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftLimit: 5
+  rightLimit: 25
   smoothTime: 0.25
   target: {fileID: 1979800152}
+  bottomLimit: 1
 --- !u!1 &554172807
 GameObject:
   m_ObjectHideFlags: 0
