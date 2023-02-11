@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1134ebc6a6e4e6b499be31f7affe6bc1
+guid: 2d91b9198cbfbcb449764ac7fe6a62e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,43 +129,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chauvquipeu_0
+      name: Slime sprite_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 26
-        width: 27
-        height: 22
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa3776cb5dbefc740a6b6ac6de001a05
-      internalID: -642947349
+      spriteID: c421ae95bba60bc4d8dfaac8fb42a345
+      internalID: 1861892097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chauvquipeu_1
+      name: Slime sprite_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 14
-        width: 26
-        height: 22
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02cadcf414f762c4cb729010f31055e0
-      internalID: 1587768226
+      spriteID: 3dc813ef630d47c46b11412d47181d33
+      internalID: -2144513781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime sprite_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec35fcb7a32cb948aec931a0ecc2858
+      internalID: 1704029551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime sprite_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf3e571600878a48bc438b362c99c7f
+      internalID: -1111594657
       vertices: []
       indices: 
       edges: []
@@ -181,8 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chauvquipeu_0: -642947349
-      Chauvquipeu_1: 1587768226
+      Slime sprite_3: -1111594657
+      Slime sprite_1: -2144513781
+      Slime sprite_0: 1861892097
+      Slime sprite_2: 1704029551
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
