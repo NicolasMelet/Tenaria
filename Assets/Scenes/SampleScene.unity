@@ -312,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106402240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.56, y: 3.32, z: 0}
+  m_LocalPosition: {x: 41.59, y: 7.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -404,8 +404,9 @@ GameObject:
   - component: {fileID: 236160747}
   - component: {fileID: 236160746}
   - component: {fileID: 236160745}
+  - component: {fileID: 236160748}
   m_Layer: 0
-  m_Name: Slime sprite_0
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,7 +420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236160743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.53, y: -5.7, z: 0.16061586}
+  m_LocalPosition: {x: -18.501, y: -5.834, z: 0.16061586}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -460,7 +461,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.029986382, y: -0.14264336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -471,7 +472,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.67299044, y: 0.44767696}
   m_EdgeRadius: 0
 --- !u!212 &236160747
 SpriteRenderer:
@@ -525,6 +526,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &236160748
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236160743}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9b29987ed334f648a5c83526ac03d84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &239263063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftLimit: 1
-  rightLimit: 25
+  rightLimit: 30
   smoothTime: 0.25
   target: {fileID: 1979800152}
   bottomLimit: 1
@@ -1714,6 +1735,7 @@ GameObject:
   - component: {fileID: 1064008950}
   - component: {fileID: 1064008949}
   - component: {fileID: 1064008951}
+  - component: {fileID: 1064008952}
   m_Layer: 6
   m_Name: Bat
   m_TagString: bat
@@ -1870,6 +1892,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1064008952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064008945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5250943b32f0d874ab42b083707d8b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 5
+  speed: 7
+  castle: {fileID: 0}
 --- !u!1 &1094813991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,8 +2286,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191585836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.36, y: 3.08, z: 0}
-  m_LocalScale: {x: 1.3548366, y: 18.735746, z: 1}
+  m_LocalPosition: {x: 42.05, y: 6.2556, z: 0}
+  m_LocalScale: {x: 1.3548366, y: 24.64646, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1872381489}

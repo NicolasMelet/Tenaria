@@ -62,12 +62,6 @@ public class player : MonoBehaviour
               StartCoroutine(Dash());
        }
 
-        if (Input.GetKeyDown("k"))
-        {
-            Destroy(gameObject);
-            print("ded");
-        }
-
         Flip();
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
