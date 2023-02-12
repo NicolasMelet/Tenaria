@@ -9,12 +9,12 @@ public class HealthBar : MonoBehaviour
     public Image fill;
     public RectTransform healthBar;
     public Transform player;
-    public new Camera camera;
+    public Camera camerat;
 
     private void Update()
     {
-        Vector3 screenPos = camera.WorldToScreenPoint(player.position);
-        transform.position = new Vector3(screenPos.x + 10, screenPos.y - 50, transform.position.z);
+        Vector3 screenPos = camerat.WorldToScreenPoint(player.position);
+        transform.position = new Vector3(screenPos.x, screenPos.y, transform.position.z);
     }
    
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HurtboxBat : MonoBehaviour
 {
-    public bat bat;
+    public Batbehavior bat;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print(bat.health.GetHealth());
