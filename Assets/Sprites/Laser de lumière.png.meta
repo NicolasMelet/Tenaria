@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87fe52e10e93744428bf162cb383592f
+guid: d06db5789b9b7e845ae86f7797314167
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 23
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grass tilemap_0
+      name: "Laser de lumi\xE8re_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 13
-        width: 25
-        height: 27
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af6d71c6a95b8cf4da04f8463ecac882
-      internalID: 2125067522
+      spriteID: e8d76a0048d7bcb40be46206b4f2be36
+      internalID: 2016068921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass tilemap_1
+      name: "Laser de lumi\xE8re_1"
       rect:
         serializedVersion: 2
-        x: 25
-        y: 13
-        width: 25
-        height: 27
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e553e5605edf3c5478de7ffdbe7fa4f7
-      internalID: 509127211
+      spriteID: cfe5e6bf21f5e3b4283345249e1cc0ad
+      internalID: -2062796259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Laser de lumi\xE8re_2"
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740e87bf31a9e174aaa93f37f5b32847
+      internalID: 1288721797
       vertices: []
       indices: 
       edges: []
@@ -181,8 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      grass tilemap_0: 2125067522
-      grass tilemap_1: 509127211
+      "Laser de lumi\xE8re_1": -2062796259
+      "Laser de lumi\xE8re_2": 1288721797
+      "Laser de lumi\xE8re_0": 2016068921
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
