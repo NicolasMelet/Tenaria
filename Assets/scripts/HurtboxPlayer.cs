@@ -6,12 +6,12 @@ public class HurtboxPlayer : MonoBehaviour
 {
     public player player;
     private bool canBeDamaged = true;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (collision.tag == "ennemy" && canBeDamaged)
+        if (collision.tag == "enemy" && canBeDamaged)
         {
-            player.health.Damage(1);
+            player.health.TakeDamage(25);
             canBeDamaged = false;
             StartCoroutine(Invincible());
         }
