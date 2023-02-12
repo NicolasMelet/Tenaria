@@ -33,9 +33,19 @@ public class Wavecontroller : MonoBehaviour
         createdat = Time.realtimeSinceStartup;
         childcountatstart = transform.childCount;
         waves = new Wave[] {
-            new Wave(4, 6),
-            new Wave(2, 4),
-            new Wave(3, 7),
+            new Wave(2, 1),
+            new Wave(3, 1),
+            new Wave(3, 2),
+            new Wave(3, 3),
+            new Wave(4, 3),
+            new Wave(4, 5),
+            new Wave(4, 4),
+            new Wave(5, 5),
+            new Wave(5, 6),
+            new Wave(5, 5),
+            new Wave(6, 6),
+            new Wave(5, 8),
+            new Wave(7, 7),
         }; 
     }
 
@@ -56,7 +66,7 @@ public class Wavecontroller : MonoBehaviour
             Batbehavior bat = batobject.GetComponent<Batbehavior>();
             bat.startPoint = batstartPoint;
             bat.endPoint = batendPoint;
-            bat.duration = Random.value * 6 + 12 ;
+            bat.duration = Random.value * 6 + 14 ;
         }
 
         for (int i = 0; i < wave.nbrslime; i++) {

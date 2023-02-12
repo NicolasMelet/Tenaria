@@ -174,7 +174,7 @@ MonoBehaviour:
   health: {fileID: 3050963735259652310}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
-  duration: 1
+  duration: 3
   createdat: 0
   amplitude: 0
   waviness: 0
