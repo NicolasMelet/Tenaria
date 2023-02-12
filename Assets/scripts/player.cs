@@ -45,13 +45,19 @@ public class player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (IsGrounded() || doubleJump)
+            if (IsGrounded())
             {
                  rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-
-                 doubleJump = !doubleJump;
+                 doubleJump = false;
             }
-             
+             else
+            {
+                if (!doubleJump)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                        doubleJump = true;
+                    }
+            }
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
