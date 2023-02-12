@@ -26,6 +26,7 @@ public class shoot : MonoBehaviour
                     projo.GetComponent<SpriteRenderer>().flipX = true;
                 }
                 projo.GetComponent<Rigidbody2D>().velocity = (direction * speedDark);
+                Destroy(projo, 0.75f);
             }
             else
             {
@@ -35,6 +36,7 @@ public class shoot : MonoBehaviour
                     projo.GetComponent<SpriteRenderer>().flipX = true;
                 }
                 projo.GetComponent<Rigidbody2D>().velocity = (direction * speedLight);
+                Destroy(projo, 0.75f);
             }
         }
     }
