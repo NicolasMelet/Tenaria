@@ -11,7 +11,7 @@ public class shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKey("e"))
         {
             if (player.isDarkness)
             {
