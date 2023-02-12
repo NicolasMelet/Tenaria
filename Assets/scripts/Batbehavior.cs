@@ -20,7 +20,7 @@ public class Batbehavior : MonoBehaviour
    
     private void Start()
     {
-        createdat = Time.realtimeSinceStartup;  
+        createdat = Time.time;  
         transform.position = startPoint.position;
         health.SetLife(life);
         amplitude = Random.value * 3 + 3;
@@ -30,7 +30,7 @@ public class Batbehavior : MonoBehaviour
     
     private void Update()
     {
-      float time = Time.realtimeSinceStartup - createdat;
+      float time = Time.time - createdat;
       float tmpnormalize = Mathf.Clamp(time, 0, duration) / duration;
       Vector3 currentposition = (1 - tmpnormalize) * startPoint.position + tmpnormalize * endPoint.position;
       currentposition += computesinusoffset(tmpnormalize);
