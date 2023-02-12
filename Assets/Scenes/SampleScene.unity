@@ -968,6 +968,7 @@ GameObject:
   - component: {fileID: 236160748}
   - component: {fileID: 236160749}
   - component: {fileID: 236160750}
+  - component: {fileID: 236160751}
   m_Layer: 6
   m_Name: Slime
   m_TagString: enemy
@@ -1136,6 +1137,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105f964405acb08409d9676a4bba7528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &236160751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236160743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd137f9866cb73343865a924dd5578d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 236160750}
+  currentRound: {fileID: 33111582}
 --- !u!1 &239263063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,6 +4054,7 @@ GameObject:
   - component: {fileID: 1064008951}
   - component: {fileID: 1064008952}
   - component: {fileID: 1064008953}
+  - component: {fileID: 1064008954}
   m_Layer: 6
   m_Name: Bat
   m_TagString: enemy
@@ -4209,6 +4225,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105f964405acb08409d9676a4bba7528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1064008954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064008945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd137f9866cb73343865a924dd5578d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1064008953}
+  currentRound: {fileID: 33111582}
 --- !u!1 &1094813991
 GameObject:
   m_ObjectHideFlags: 0
