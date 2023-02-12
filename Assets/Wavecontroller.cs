@@ -22,6 +22,9 @@ public class Wavecontroller : MonoBehaviour
     public int wavecount = 0;
     public Transform batstartPoint;
     public Transform batendPoint;
+    public GameObject slimeprefab;
+    public Transform slimestartPoint;
+    public Transform slimeendPoint;
     public int childcountatstart;
 
     // Start is called before the first frame update
@@ -53,8 +56,15 @@ public class Wavecontroller : MonoBehaviour
             Batbehavior bat = batobject.GetComponent<Batbehavior>();
             bat.startPoint = batstartPoint;
             bat.endPoint = batendPoint;
-            bat.duration = Random.value * 3 + 7 ;
+            bat.duration = Random.value * 6 + 12 ;
         }
-        
+
+        for (int i = 0; i < wave.nbrslime; i++) {
+            GameObject slimeobject = Instantiate(slimeprefab, transform);
+            slime slime = slimeobject.GetComponent<slime>();
+            slime.startPoint = slimestartPoint;
+            slime.endPoint = slimeendPoint;
+            slime.duration = Random.value * 6 + 12 ;
+        }
     }
 }

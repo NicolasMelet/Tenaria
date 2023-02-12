@@ -2,19 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class slime : MonoBehaviour
+public class slime : Batbehavior
 {
-    public int life = 5;
-    public Health health;
-    // Start is called before the first frame update
-    void Start()
+   public override Vector3 computesinusoffset(float tmpnormalize)
     {
-        health.SetLife(life);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return Vector3.up * Mathf.Abs(Mathf.Sin(tmpnormalize * waviness * Mathf.PI) * amplitude);
     }
 }

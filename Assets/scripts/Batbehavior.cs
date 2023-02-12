@@ -23,8 +23,8 @@ public class Batbehavior : MonoBehaviour
         createdat = Time.realtimeSinceStartup;  
         transform.position = startPoint.position;
         health.SetLife(life);
-        amplitude = Random.value * 3 + 5;
-        waviness = Mathf.FloorToInt(Random.value * 5);
+        amplitude = Random.value * 3 + 3;
+        waviness = Mathf.FloorToInt(Random.value * 6) + 4;
        // dest = castle.GetComponent<Transform>();
     }
     
@@ -33,7 +33,7 @@ public class Batbehavior : MonoBehaviour
       float time = Time.realtimeSinceStartup - createdat;
       float tmpnormalize = Mathf.Clamp(time, 0, duration) / duration;
       Vector3 currentposition = (1 - tmpnormalize) * startPoint.position + tmpnormalize * endPoint.position;
-      currentposition += Vector3.up * Mathf.Sin(tmpnormalize * waviness * Mathf.PI) * amplitude;
+      currentposition += computesinusoffset(tmpnormalize);
       transform.position = currentposition;
 
       if (tmpnormalize == 1)
@@ -41,6 +41,11 @@ public class Batbehavior : MonoBehaviour
         Destroy(gameObject);
       }
 
+    }
+
+    public virtual Vector3 computesinusoffset(float tmpnormalize)
+    {
+        return Vector3.up * Mathf.Sin(tmpnormalize * waviness * Mathf.PI) * amplitude;
     }
     
      
