@@ -71,16 +71,6 @@ public class shoot : MonoBehaviour
             direction = new Vector2(-1, 0);
             return;
         }
-        if (Input.GetAxisRaw("Vertical") > 0.3f)
-        {
-            direction = new Vector2(0, 1);
-            return;
-        }
-        if (Input.GetAxisRaw("Vertical") < -0.3f)
-        {
-            direction = new Vector2(0, -1);
-            return;
-        }
         if (player.isFacingRight)
         {
             direction = new Vector2(1, 0);
