@@ -1296,6 +1296,7 @@ Transform:
   m_Children:
   - {fileID: 2118285993}
   - {fileID: 1758700424}
+  - {fileID: 1825436099}
   m_Father: {fileID: 1872381489}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3937,13 +3938,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825436097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.71, y: 5.62, z: 1}
-  m_LocalScale: {x: 6.9532, y: 5.7871, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.066687986, y: 0.031145375, z: 0.507123}
+  m_LocalScale: {x: 0.4966571, y: 0.48225832, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 864537847}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872381488
 GameObject:
@@ -4080,6 +4081,7 @@ GameObject:
   - component: {fileID: 1979800153}
   - component: {fileID: 1979800154}
   - component: {fileID: 1979800155}
+  - component: {fileID: 1979800156}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4107,6 +4109,7 @@ MonoBehaviour:
     m_Bits: 8
   jumpingPower: 25
   dashingPower: 24
+  isDarkness: 1
   animator: {fileID: 1979800155}
 --- !u!61 &1979800149
 BoxCollider2D:
@@ -4366,6 +4369,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1979800156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979800147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1ceb5d6339cba439fc7f302706d3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1979800148}
+  DarkSprite: {fileID: -1491497197, guid: c09c10bee68447b4cbd22fe3daea46c4, type: 3}
+  LightSprite: {fileID: 1600452259, guid: 95accb752c021174487fbfbd9f80465f, type: 3}
+  DarkControll: {fileID: 0}
+  LightControll: {fileID: 0}
 --- !u!1 &2118285992
 GameObject:
   m_ObjectHideFlags: 0

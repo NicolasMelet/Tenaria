@@ -14,6 +14,7 @@ public class player : MonoBehaviour
     private bool canDash = true;
     private bool doubleJump;
     public float dashingPower = 24f;
+    public bool isDarkness = true;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
     private float horizontal;
@@ -66,6 +67,7 @@ public class player : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        animator.SetBool("isDarkness", isDarkness);
     }
 
     private bool IsGrounded()
