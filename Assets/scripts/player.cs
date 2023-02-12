@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    public Health health;
+    public Health_handler health;
     public float speed = 10.0f;
     public Transform groundCheck;
     public TrailRenderer tr;
     public LayerMask groundLayer;
+    public Sprite dead;
     public bool isFacingRight = true;
     private bool isDashing;
     public float jumpingPower = 16f;
     private bool canDash = true;
+    private bool canMove = true;
     private bool doubleJump;
     public float dashingPower = 24f;
     public bool isDarkness = true;
@@ -72,6 +74,11 @@ public class player : MonoBehaviour
 
         Flip();
 
+        if (health.currentHealth <= 0)
+        {
+            Die();
+        }
+
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
         animator.SetBool("isDarkness", isDarkness);
@@ -82,9 +89,16 @@ public class player : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
+    private void Die()
+    {
+        canMove = false;
+        animator.SetBool("Dead", true);
+        GameOverManager.instance.OnPlayerDeath();
+    }
+
     private void FixedUpdate()
     {
-        if (isDashing)
+        if (isDashing || canMove == false)
         {
             return;
         }
@@ -92,13 +106,10 @@ public class player : MonoBehaviour
     }
     private void Flip()
     {
-       if (horizontal > 0 && !isFacingRight || horizontal < 0 && isFacingRight)
+       if ((horizontal > 0 && !isFacingRight || horizontal < 0 && isFacingRight) && canMove)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = !gameObject.GetComponent<SpriteRenderer>().flipX;
             isFacingRight = !isFacingRight;
-            /*Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;*/
         }
     }
     private IEnumerator Dash()

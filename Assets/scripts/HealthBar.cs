@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     public Image fill;
     public RectTransform healthBar;
     public Transform player;
-    public Camera camera;
+    public new Camera camera;
 
     private void Update()
     {
