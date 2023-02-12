@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
+    public Health health;
     public float speed = 10.0f;
     public Transform groundCheck;
     public TrailRenderer tr;
     public LayerMask groundLayer;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private bool isDashing;
     public float jumpingPower = 16f;
     private bool canDash = true;
@@ -30,20 +31,20 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (isDashing)
+        if (isDashing)
         {
             return;
         }
 
-       horizontal = Input.GetAxisRaw("Horizontal");  
-       
-       if (IsGrounded() && !Input.GetButton("Jump"))
-       {
-              doubleJump = false;
-       }
+        horizontal = Input.GetAxisRaw("Horizontal");  
 
-       if (Input.GetButtonDown("Jump"))
-       {
+        if (IsGrounded() && !Input.GetButton("Jump"))
+        {
+              doubleJump = false;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
             if (IsGrounded() || doubleJump)
             {
                  rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
@@ -51,17 +52,17 @@ public class player : MonoBehaviour
                  doubleJump = !doubleJump;
             }
              
-       }
+        }
 
-       if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-       {
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
               rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f); 
-       }
+        }
 
-       if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-       {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
               StartCoroutine(Dash());
-       }
+        }
 
         Flip();
 
@@ -109,7 +110,6 @@ public class player : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-
     }
 
 }

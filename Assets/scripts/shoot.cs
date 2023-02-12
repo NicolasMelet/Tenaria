@@ -7,20 +7,90 @@ public class shoot : MonoBehaviour
     public player player;
     public GameObject DarkProj;
     public GameObject LightProj;
+    public float speedDark;
+    public float speedLight;
+    private Vector2 direction;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("e"))
+        setDirection();
+
+        if (Input.GetKeyDown("e"))
         {
             if (player.isDarkness)
             {
                 GameObject projo = Instantiate(DarkProj, transform.position, Quaternion.identity) as GameObject;
+                if (player.isFacingRight)
+                {
+                    projo.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                projo.GetComponent<Rigidbody2D>().velocity = (direction * speedDark);
             }
             else
             {
                 GameObject projo = Instantiate(LightProj, transform.position, Quaternion.identity) as GameObject;
+                if (player.isFacingRight)
+                {
+                    projo.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                projo.GetComponent<Rigidbody2D>().velocity = (direction * speedLight);
             }
         }
+    }
+
+    void setDirection()
+    {
+        if (Input.GetAxisRaw("Horizontal") > 0.3f) 
+        {
+            if (Input.GetAxisRaw("Vertical") > 0.3f)
+            {
+                direction = new Vector2(1, 1);
+                return;
+            }
+            if (Input.GetAxisRaw("Vertical") < -0.3f)
+            {
+                direction = new Vector2(1, -1);
+                return;
+            }
+            direction = new Vector2(1, 0);
+            return;
+        }
+        if (Input.GetAxisRaw("Horizontal") < -0.3f)
+        {
+            if (Input.GetAxisRaw("Vertical") > 0.3f)
+            {
+                direction = new Vector2(-1, 1);
+                return;
+            }
+            if (Input.GetAxisRaw("Vertical") < -0.3f)
+            {
+                direction = new Vector2(-1, -1);
+                return;
+            }
+            direction = new Vector2(-1, 0);
+            return;
+        }
+        if (Input.GetAxisRaw("Vertical") > 0.3f)
+        {
+            direction = new Vector2(0, 1);
+            return;
+        }
+        if (Input.GetAxisRaw("Vertical") < -0.3f)
+        {
+            direction = new Vector2(0, -1);
+            return;
+        }
+        if (player.isFacingRight)
+        {
+            direction = new Vector2(1, 0);
+            return;
+        }
+        else
+        {
+            direction = new Vector2(-1, 0);
+            return;
+        }
+
     }
 }
