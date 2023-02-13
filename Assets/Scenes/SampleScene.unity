@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 97530017}
   - component: {fileID: 97530016}
   - component: {fileID: 97530015}
+  - component: {fileID: 97530019}
   m_Layer: 7
   m_Name: LightProj
   m_TagString: lightprojo
@@ -456,6 +457,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &97530019
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97530014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88f257be958ed694a86ec81ea7b402db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &97632775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,6 +4362,7 @@ GameObject:
   - component: {fileID: 1148847469}
   - component: {fileID: 1148847471}
   - component: {fileID: 1148847472}
+  - component: {fileID: 1148847473}
   m_Layer: 7
   m_Name: ShadowProj
   m_TagString: darkprojo
@@ -4474,6 +4496,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4c5eae97da0ac4ea99f766acd409c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1148847473
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148847467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b5409afa3027534dbb8d0083a72429d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1154615826
 GameObject:
   m_ObjectHideFlags: 0
@@ -6053,6 +6095,7 @@ MonoBehaviour:
   batprefab: {fileID: 4682274965633871287, guid: f7fdc10d9280f4347858585f4535c779, type: 3}
   createdat: 0
   wavecount: 0
+  wavetotal: 0
   batstartPoint: {fileID: 1749704712}
   batendPoint: {fileID: 1219628209}
   slimeprefab: {fileID: 3050963735259652319, guid: c1c58c5166b55ee4282c28325b80759c, type: 3}
