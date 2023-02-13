@@ -20,6 +20,7 @@ public class Wavecontroller : MonoBehaviour
     public float createdat;
     public Wave[] waves;
     public int wavecount = 0;
+    public int wavetotal = 0;
     public Transform batstartPoint;
     public Transform batendPoint;
     public GameObject slimeprefab;
@@ -56,6 +57,7 @@ public class Wavecontroller : MonoBehaviour
         {
             summonwave(waves[wavecount]);
             wavecount = (wavecount + 1) % waves.Length;
+            wavetotal += 1;
         }
     }
 
